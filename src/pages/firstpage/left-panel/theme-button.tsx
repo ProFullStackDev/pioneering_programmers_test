@@ -1,4 +1,4 @@
-import useTheme from "../../../hooks/useTheme";
+import useTheme, { Theme } from "../../../hooks/useTheme";
 
 import { Props } from ".";
 
@@ -6,7 +6,7 @@ const ThemeButton: React.FC<Props> = ({ sendMessage }) => {
   const [theme, setTheme] = useTheme();
 
   const changeTheme = () => {
-    const newTheme: string = toggleTheme();
+    const newTheme: Theme = toggleTheme();
     setTheme(newTheme);
     sendMessage(`Theme was set to ${newTheme}`);
   };
