@@ -1,0 +1,123 @@
+.modal,
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity .15s linear;
+}
+
+.modal-backdrop {
+  opacity: 0.5;
+  background-color: #000;
+}
+
+.modal-dialog {
+  max-width: 500px;
+  margin: 1.75rem auto;
+  z-index: 100;
+  position: relative;
+  transition: transform .3s ease-out;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 0.3rem;
+}
+
+.modal-header {
+  border-bottom: 1px solid #e9ecef;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-title {
+  line-height: 1.5;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: 1px solid #e9ecef;
+  gap: 0.5rem;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  background-color: transparent;
+  border: 0;
+  padding: 1rem;
+  margin: -1rem -1rem -1rem auto;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 0.8;
+}
+
+.modal.fade {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal.show {
+  opacity: 1;
+  z-index: 10;
+}
+
+.modal.fade .modal-dialog {
+  transform: translate(0, -25%);
+}
+
+.modal.show .modal-dialog {
+  transform: translate(0, 0);
+}
+
+.modal.fade .modal-backdrop {
+  opacity: 0;
+}
+
+.modal.show .modal-backdrop {
+  opacity: 0.5;
+}
+
+.button-ok {
+  background-color: #03F;
+  color: white;
+}
+
+.button-remove {
+  background-color: #ffa500;
+  color: #000;
+}
+
+.button-cancel {
+  background: transparent;
+  color: #000;
+}
+
+.button-delete {
+  background-color: #cc0000;
+  color: white;
+}

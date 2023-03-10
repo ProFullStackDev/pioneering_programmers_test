@@ -1,0 +1,26 @@
+.tooltip {
+  position: absolute;
+  background: #333333b8;
+  color: white;
+  left: 2.5rem;
+  font-size: smaller;
+  padding: 0.25rem 1rem;
+  margin-top: -0.25rem;
+  border-radius: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar-menu {
+  width: 5rem !important;
+  display: block;
+  color: #555;
+}
+
+.sidebar-menu:hover {
+  color: #000;
+}
+
+.sidebar-menu:hover .tooltip {
+  opacity: 1;
+}
